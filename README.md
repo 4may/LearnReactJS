@@ -7,3 +7,4 @@
 
 * [anyenv](https://github.com/anyenv/anyenv)
 * [nodenv](https://github.com/nodenv/nodenv)
+* [nodenv-yarn-install](https://github.com/pine/nodenv-yarn-install)
