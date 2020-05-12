@@ -1,7 +1,7 @@
 {
-  "name": "practice1",
+  "name": "practice",
   "version": "1.0.0",
-  "description": "３つの要素を持つunordered listを表示してみよう。",
+  "description": "https://www.youtube.com/watch?v=DLX62G4lc44",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
