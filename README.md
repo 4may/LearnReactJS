@@ -9,7 +9,7 @@
 * [nodenv](https://github.com/nodenv/nodenv)
 * [nodenv-yarn-install](https://github.com/pine/nodenv-yarn-install)
 
-npmよりもyarnのが速くて、コマンドがシンプルらしい
+npmよりもyarnのが速くて、コマンドがシンプルらしい。エディタはとりあえずvs codeを使う。
 
 ## ハマりどころ
 
