@@ -7,19 +7,9 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-function MyInfo(){
-    return (
-        //複数のUIコンポーネントはdivタグでくくる
-        <div>
-            <h1>Four May</h1>
-            <p>I Love cake!</p>
-            <ol>
-                <li>banana</li>
-                <li>apple</li>
-                <li>blueberry</li>
-            </ol>
-        </div>
-    )
-}
+//自作モジュールのimportはポイントが２つ
+//* 拡張子jsは要らない
+//* 相対パスを書く
+import MyInfo from "../components/MyInfo"
 
 ReactDOM.render(<MyInfo />, document.getElementById('root'))
