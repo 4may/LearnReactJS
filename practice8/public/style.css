@@ -1,24 +1,48 @@
+body{
+    background-color: whitesmoke;
+}
+
+.todo-list{
+    background-color: white;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    box-shadow: 
+        /*一番目の層のshadow*/
+        0 1px 1px rgba(0,0,0,15),
+        /*二番目の層*/
+        0 10px 0 -5px #eee,
+        /*二番目の層のshadow*/
+        0 10px 1px -4px rgba(0,0,0,15),
+        /*三番目の層のshadow*/
+        0 20px 0 -10px #eee,
+        /*三番目の層のshadow*/
+        0 20px 1px -9px rgba(0,0,0,15);
+    padding: 30px;
+}
+
+.todo-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 20px 0;
+    width: 70%;
+    border-bottom: 1px solid #cecece;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: #333333;
+}
+
 /*デフォルトのcheckboxを無効にする。(checkboxを自作するために必要な処理)*/
 input[type=checkbox]{
-    display: none; 
+    margin-right: 10px;
+    font-size: 30px;
 }
 
-/*
-  チェックボックスのデザインを指定
-  部品の定義者は、デザインのみを決める。配置は決めない。
-*/
-.label {
-    display: block; /*blockボックスにする(縦横の幅を指定できる)*/
-    text-align: center; /*中央揃え*/
-    cursor: pointer; /*カーソルの形状*/
-    color: rgb(219, 17, 17);
-    border: 2px solid rgb(13, 132, 230); /*外枠*/
-    border-radius: 5px; /*枠の角を丸くする*/
+input[type=checkbox]:focus{
+    outline: 0;
 }
-
-/*チェックボックスをチェックした時のスタイルを指定。*/
-input[type="checkbox"]:checked + label{
-    background: rgb(14, 138, 221);
-    color: #ffffff;
-}
-
