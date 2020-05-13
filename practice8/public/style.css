@@ -1,0 +1,24 @@
+/*デフォルトのcheckboxを無効にする。(checkboxを自作するために必要な処理)*/
+input[type=checkbox]{
+    display: none; 
+}
+
+/*
+  チェックボックスのデザインを指定
+  部品の定義者は、デザインのみを決める。配置は決めない。
+*/
+.label {
+    display: block; /*blockボックスにする(縦横の幅を指定できる)*/
+    text-align: center; /*中央揃え*/
+    cursor: pointer; /*カーソルの形状*/
+    color: rgb(219, 17, 17);
+    border: 2px solid rgb(13, 132, 230); /*外枠*/
+    border-radius: 5px; /*枠の角を丸くする*/
+}
+
+/*チェックボックスをチェックした時のスタイルを指定。*/
+input[type="checkbox"]:checked + label{
+    background: rgb(14, 138, 221);
+    color: #ffffff;
+}
+

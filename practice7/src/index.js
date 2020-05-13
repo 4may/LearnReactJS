@@ -54,11 +54,7 @@ function App() {
 
             <h1>Correct: It is currently about {date.getHours() % 12} o'clock!</h1>
 
-            {/*JSXの構文が、以下の通り。
-            <h1　style={color: "#FF8C00"}>Good {timeOfDay}</h1>
-            さらに、styleの値をJavascriptのオブジェクトとして扱いたいので、{}で括る。
-            結果的に、二重の{}で括ることになる。
-            <h1　style={{color: "#FF8C00"}}>Good {timeOfDay}</h1>*/}
+            {/*辞書のための{}と、JSのオブジェクトであることを表す{}を二つ使っている。*/}
             <h1　style={{color: "#FF8C00"}}>Good {timeOfDay}</h1>
 
             {/*JSの構文では変数名に-は使えないため、background-colorではなく、backgroundColorを使う。*/}
