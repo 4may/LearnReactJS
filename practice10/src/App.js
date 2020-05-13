@@ -1,35 +1,40 @@
 import React from "react"
 
+import ContactCard from './ContactCard'
+
 function App() {
     return(
         <div className="contacts">
-            <div className="contact-card">
-                <img src="http://placekitten.com/300/200"/>
-                <h3>Mr. Whiskerson</h3>
-                <p>Phone: (212) 555-1234</p>
-                <p>Email: mr.whiskaz@catnap.meow</p>
-            </div>
+            {/*
+            React propertyの例
+            */}
+            <ContactCard 
+                name="Mr. Whiskerson"
+                imgUrl="http://placekitten.com/300/200"
+                phone="(212) 555-1234"
+                email="mr.whiskaz@catnap.meow"
+            />
 
-            <div className="contact-card">
-                <img src="http://placekitten.com/400/200"/>
-                <h3>Fluffykins</h3>
-                <p>Phone: (212) 555-2345</p>
-                <p>Email: fluff@me.com</p>
-            </div>
+            <ContactCard 
+                name="Fluffykins"
+                imgUrl="http://placekitten.com/100/200"
+                phone="(212) 555-2345"
+                email="fluff@me.com"
+            />
 
-            <div className="contact-card">
-                <img src="http://placekitten.com/400/300"/>
-                <h3>Destroyer</h3>
-                <p>Phone: (212) 555-3456</p>
-                <p>Email: ofwordls@yahoo.com</p>
-            </div>
+            <ContactCard 
+                name="Destroyer"
+                imgUrl="http://placekitten.com/400/300"
+                phone="(212) 555-3456"
+                email="ofwordls@yahoo.com"
+            />
 
-            <div className="contact-card">
-                <img src="http://placekitten.com/200/100"/>
-                <h3>Felix</h3>
-                <p>Phone: (212) 555-4567</p>
-                <p>Email: thecat@hotmail.com</p>
-            </div>
+            <ContactCard 
+                name="Felix"
+                imgUrl="http://placekitten.com/200/100"
+                phone="(212) 555-4567"
+                email="thecat@hotmail.com"
+            />
         </div>
     )
 }
