@@ -9,13 +9,14 @@ class App extends Component{
 
         //todosData(JSONファイルの代わり)をロード
         //constructorでロードすることによって、描画のたびに(render()が呼ばれるたびに)データをロードするのを防ぐ。
-        const todoComponents = todosData.map(item => <TodoItem key={item.id} item={item}/>)
         this.state = {
-            todoComponents : todoComponents
+            todos : todosData
         }
     }
 
     render(){
+        const todoComponents = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
+
         return(
             <div className='todo-list'>
                 {this.state.todoComponents}
