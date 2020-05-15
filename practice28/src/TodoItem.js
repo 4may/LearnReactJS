@@ -2,7 +2,11 @@ import React from 'react'
 
 class TodoItem extends React.Component{
     render(){
-        const textDeco = this.props.item.completed ? "line-through" : "none"
+        const completedStyle = {
+            fontStyle : "italic",
+            color : "#cdcdcd",
+            textDecoration : "line-through"
+        }
 
         return(
             <div className='todo-item'>
@@ -10,7 +14,7 @@ class TodoItem extends React.Component{
                        checked={this.props.item.completed} 
                        onChange={() => this.props.handleChange(this.props.item.id)}>
                 </input>
-                <p style={{textDecoration:textDeco}}>{this.props.item.text}</p>
+                <p style={this.props.item.completed ? completedStyle : null}>{this.props.item.text}</p>
             </div>
         )
     }
