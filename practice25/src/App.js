@@ -21,8 +21,9 @@ class App extends Component{
 
     render(){
         return(
+            //isLoadingを定義しているクラスが、呼び出す処理を使い分ける。
             <div>
-                <Conditional isLoading={this.state.isLoading} />
+                {this.state.isLoading ? <h1>Loading...</h1> : <Conditional />}
             </div>
         )
     }
