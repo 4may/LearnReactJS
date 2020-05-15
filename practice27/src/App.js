@@ -5,8 +5,7 @@ class App extends Component{
         super()
 
         this.state = {
-            isLoggedIn : false,
-            
+            isLoggedIn : false
         }
 
         this.auth = this.auth.bind(this)
@@ -21,20 +20,12 @@ class App extends Component{
     }
 
     render(){
+        const buttonText = this.state.isLoggedIn ? "LOG OUT" : "LOG IN"
+        const displayText = this.state.isLoggedIn ? "Logged in" : "Logged Out"
         return(
             <div className='auth'>
-                { 
-                this.state.isLoggedIn ?
-                <div>
-                    <button onClick={this.auth}>LogOut</button>
-                    <p>Log in!</p>
-                </div>
-                : 
-                <div>
-                    <button onClick={this.auth}>LogIn</button>
-                    <p>Log out!</p>
-                </div>
-                }
+                <button onClick={this.auth}>{buttonText}</button>
+                <p>{displayText}</p>
             </div>
         )
     }
