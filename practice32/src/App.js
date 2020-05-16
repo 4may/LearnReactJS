@@ -7,12 +7,20 @@ class App extends Component{
         this.state = {
             firstName : "",
             lastName : "",
-            age : "",
+            age : "", //0よりも""が好ましい。なぜなら、0だとフォームに0という数字が入力されてしまうため。
             gender : "",
             location : "",
             isVegetarian : false,
             isKosher : false,
             lactoseFree : false
+
+            // componentは複数まとめて扱うことができるが、これだと値の更新がめちゃ煩雑になる。
+            // そのため、バラバラに定義する方がわかりやすい。
+            // dietaryRestrictions : {
+            //     isVegetarian : false,
+            //     isKosher : false,
+            //     lactoseFree : false
+            // }
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -79,6 +87,8 @@ class App extends Component{
                     value={this.state.location}
                     onChange={this.handleChange}
                 >
+                    {/* 先頭にplaceholderを入れないと、先頭の項目(群馬)を選びたい場合、手間になる。 */}
+                    <option value=''>-- 行き先を選択してください --</option> 
                     <option value='gunma'>群馬</option>
                     <option value='tochigi'>栃木</option>
                     <option value='ibaraki'>茨城</option>
@@ -118,9 +128,10 @@ class App extends Component{
                 <h2>Age          : {this.state.age}</h2>
                 <h2>Gender       : {this.state.gender}</h2>
                 <h2>Location     : {this.state.location}</h2>
-                <h2>Dietary restrictions   : {this.state.isVegetarian}</h2>
-                <h2>Kosher       : {this.state.isKosher}</h2>
-                <h2>Lactose Free : {this.state.lactoseFree}</h2>
+                {/*Reactでは、Boolean型の値は表示されない。 そのため、true/falseの値に基づいて何らかの文字列を表示する。*/}
+                <h2>Dietary restrictions   : {this.state.isVegetarian ? "Yes" : "No"}</h2>
+                <h2>Kosher       : {this.state.isKosher ? "Yes" : "No"}</h2>
+                <h2>Lactose Free : {this.state.lactoseFree ? "Yes" : "No"}</h2>
             </form>
         )
     }
