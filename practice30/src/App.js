@@ -14,30 +14,37 @@ class App extends Component{
         }
 
         this.handleChange = this.handleChange.bind(this)
-        this.handleChange2 = this.handleChange2.bind(this)
     }
 
     //イベントハンドラは、発生したイベントの情報をeventオブジェクトとして受け取ることができる
     handleChange(event){
-        //event.tagetは、イベントが発生した(イベントハンドラが登録されている)コンポーネントを指す。ここでは、<input />を指す。
-        this.setState({
-            firstName : event.target.value
-        })
-    }
+        //setStateの前に、値を保持しておく
+        const {name, value} = event.target
 
-    handleChange2(event){
         //event.tagetは、イベントが発生した(イベントハンドラが登録されている)コンポーネントを指す。ここでは、<input />を指す。
         this.setState({
-            lastName : event.target.value
+            [name] : value
         })
     }
 
     render(){
         return(
             <form>
-                <input type='text' placeholder='First Name' onChange={this.handleChange}/>
+                {/*nameプロパティを使うことで、一つのイベントハンドラで複数のFormの値を保持することができる。
+                   ただし、stateの変数と、nameプロパティの値は同じにする必要がある。*/}
+                <input 
+                    type='text'
+                    value={this.state.firstName} //明示的にfirstNameの値であることを示す
+                    name='firstName' 
+                    placeholder='First Name' 
+                    onChange={this.handleChange}/>
                 <br />
-                <input type='text' placeholder='Last Name' onChange={this.handleChange2}/>
+                <input 
+                    type='text' 
+                    value={this.state.lastName} //明示的にlastNameの値であることを示す
+                    name='lastName'
+                    placeholder='Last Name' 
+                    onChange={this.handleChange}/>
                 <h1>{this.state.firstName} {this.state.lastName}</h1>
             </form>
         )
