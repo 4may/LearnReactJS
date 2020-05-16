@@ -136,10 +136,16 @@ presets: ['@babel/preset-env']
 
 hookでは、function componentとしてオブジェクトを宣言し、render()を使わない。bindも要らない。
 
-### Formの開発を楽にする
+### 便利ライブラリ
 
-[formik](https://github.com/jaredpalmer/formik)おすすめ
+* [formik](https://github.com/jaredpalmer/formik) : form開発のお供
 
-### Stateの管理を楽にする
+* [redux](https://github.com/reduxjs/redux) : state管理のお供
 
-[redux](https://github.com/reduxjs/redux)を使おう
+## メモ
+
+* CI/CD
+* 自動テスト
+* 便利ライブラリ
+* hook
+* 自作アプリ
