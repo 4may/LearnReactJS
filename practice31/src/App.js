@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 
 //formikが便利
-
 class App extends Component{
+    //=======================ビジネスロジック============================
     constructor(){
         super()
 
@@ -25,7 +25,9 @@ class App extends Component{
 
         type === "checkbox" ? this.setState({ [name] : checked }) : this.setState({ [name] : value })
     }
+    //================================================================
 
+    //=========================UIロジック==============================
     render(){
         return(
             <div>
@@ -99,6 +101,7 @@ class App extends Component{
             </div>
         )
     }
+    //================================================================
 }
 
 export default App

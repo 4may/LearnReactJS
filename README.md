@@ -119,3 +119,27 @@ presets: ['@babel/preset-env']
 
 上記の通り。
 
+---
+
+## TIPS
+
+### アーキテクチャ
+
+以下の二つは明確に分けよう。
+* ビジネスロジック
+    * constructor
+    * handler
+* UIロジック
+    * render
+
+動画では、[このサイト](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)を参考にしてクラス分けするのを推奨しているが、16.8以降の最新のアーキテクチャでは、[hook](https://reactjs.org/docs/hooks-intro.html)を使うのがおすすめ。
+
+hookでは、function componentとしてオブジェクトを宣言し、render()を使わない。bindも要らない。
+
+### Formの開発を楽にする
+
+[formik](https://github.com/jaredpalmer/formik)おすすめ
+
+### Stateの管理を楽にする
+
+[redux](https://github.com/reduxjs/redux)を使おう
