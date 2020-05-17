@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 
 class App extends Component{
-    constructor(){
-        super()
-
-        this.state = {
-            firstName : ""
-        }
-
-        this.handleChange = this.handleChange.bind(this)
+    //クラスプロパティとして宣言できるようになった。
+    //これによって、コンストラクタを記述する必要がなくなった。
+    state = {
+        firstName : ""
     }
 
-    handleChange(event){
+    //Component内の関数をアロー関数として表記できるようになった。
+    //これによって、bindを記述する必要がなくなった。(アロー関数は、関数自体にはthisを持たず、その外のクラス(App)をthis)とみなす) 
+    handleChange = (event) => {
         const {name, value} = event.target
 
         this.setState({[name] : value})

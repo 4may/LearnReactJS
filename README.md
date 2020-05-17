@@ -149,3 +149,13 @@ hookでは、function componentとしてオブジェクトを宣言し、render(
 * 便利ライブラリ
 * hook
 * 自作アプリ
+
+## 参考
+
+* [context api](https://reactjs.org/docs/context.html)
+* [error handling](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
+* [render props](https://reactjs.org/docs/render-props.html)
+* [higher order components](https://reactjs.org/docs/higher-order-components.html)
+* [react router](https://reacttraining.com/react-router/)
+* [react hooks](https://reactjs.org/docs/hooks-overview.html)
+* [react lazy, memo, suspense](https://ja.reactjs.org/blog/2018/10/23/react-v-16-6.html)
