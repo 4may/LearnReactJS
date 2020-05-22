@@ -13,9 +13,11 @@ npmよりもyarnのが速くて、コマンドがシンプルらしい。エデ�
 
 ## ハマりどころ
 
-```
+---
+
+**症状１**
+
 動画のようにindex.html, index.js, style.cssを作るだけでは動かない・・・
-```
 
 **原因**
 
@@ -27,9 +29,9 @@ reactとして動かすためにはいろいろお膳立てが必要なようだ
 
 ---
 
-```
+**症状２**
+
 zsh: command not found: webpack-dev-server
-```
 
 **原因**
 
@@ -41,6 +43,8 @@ node_modules/.binまでのpathが通っていない
 * [package.jsonにコマンドを追加する](https://stackoverflow.com/questions/31611527/webpack-webpack-dev-server-command-not-found)　※おすすめ
 
 ---
+
+**症状３**
 
 ```
 ERROR in ./src/index.js
@@ -92,6 +96,8 @@ babel-upgrade --write --install
 ```
 
 ---
+
+**症状4**
 
 ```
 ERROR in ./src/index.js
@@ -149,3 +155,13 @@ hookでは、function componentとしてオブジェクトを宣言し、render(
 * 便利ライブラリ
 * hook
 * 自作アプリ
+
+## 参考
+
+* [context api](https://reactjs.org/docs/context.html)
+* [error handling](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
+* [render props](https://reactjs.org/docs/render-props.html)
+* [higher order components](https://reactjs.org/docs/higher-order-components.html)
+* [react router](https://reacttraining.com/react-router/)
+* [react hooks](https://reactjs.org/docs/hooks-overview.html)
+* [react lazy, memo, suspense](https://ja.reactjs.org/blog/2018/10/23/react-v-16-6.html)
