@@ -13,9 +13,11 @@ npmよりもyarnのが速くて、コマンドがシンプルらしい。エデ�
 
 ## ハマりどころ
 
-```
+---
+
+**症状１**
+
 動画のようにindex.html, index.js, style.cssを作るだけでは動かない・・・
-```
 
 **原因**
 
@@ -27,9 +29,9 @@ reactとして動かすためにはいろいろお膳立てが必要なようだ
 
 ---
 
-```
+**症状２**
+
 zsh: command not found: webpack-dev-server
-```
 
 **原因**
 
@@ -41,6 +43,8 @@ node_modules/.binまでのpathが通っていない
 * [package.jsonにコマンドを追加する](https://stackoverflow.com/questions/31611527/webpack-webpack-dev-server-command-not-found)　※おすすめ
 
 ---
+
+**症状３**
 
 ```
 ERROR in ./src/index.js
@@ -92,6 +96,8 @@ babel-upgrade --write --install
 ```
 
 ---
+
+**症状4**
 
 ```
 ERROR in ./src/index.js
